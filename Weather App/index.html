@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <main class="main-container">
+        <header class="input-container">
+            <div class="search">
+                <input type="text" class="city-input" placeholder="Search City" />
+                <button class="search-btn" aria-label="Search">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+            </div>
+        </header>
+
+        <section class="weather-data">
+            <section class="location-row" >
+            <div class="place"><span class="material-symbols-outlined">place</span></div>
+            <div class="date"></div>
+        </section>
+
+        <section class="current-row">
+            <div class="weather-illustration">
+                <img id="weatherIcon" src="cloud.png">
+                    <circle cx="30" cy="30" r="12" fill="#FFD24C" />
+                    <g transform="translate(28,38)">
+                        <path d="M10 30h60a18 18 0 0 0 0-36 26 26 0 0 0-50 8 14 14 0 0 0 0 28z" fill="#fff"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="temp-block">
+                <div class="temp"><span class="unit"></span></div>
+                <div class="desc"></div>
+            </div>
+        </section>
+
+        <section class="info-row">
+            <div class="info-item">
+                <svg class="info-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8 6 6 7.5 6 11a6 6 0 0 0 12 0c0-3.5-2-5-6-9z" fill="none" stroke="#fff" stroke-width="1.2"/></svg>
+                <div class="label"><br><strong></strong></div>
+            </div>
+            <div class="info-item">
+                <svg class="info-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h14l-4 6" stroke="#fff" stroke-width="1.2" fill="none"/></svg>
+                <div class="label"><br><strong></strong></div>
+            </div>
+        </section>
+    </section>
+
+    <section class="search-city section-message" style="display: none;">
+        <img src="./assets/message/error.png" alt="">
+        <div>
+            <h1>Search City</h1>
+            <h4 class="regular-txt">
+                Find out the weather conditions of the city
+            </h4>
+        </div>
+    </section> 
+
+    <section class="not-found section-message" style="display: none;">
+        <img  src="./assets/message/not-Found.png" alt="">
+        <div>
+            <h1>Search City</h1>
+            <h4 class="regular-txt">
+                Find out the weather conditions of the city
+            </h4>
+        </div>
+    </section>
+    </main>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
